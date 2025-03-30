@@ -29,9 +29,10 @@ body {
   font-family: $font-body;
   font-weight: 400;
   color: $text;
+  width: 100%;
   background-color: $background;
   background-image: url("./image/ScrollEase-bg.webp");
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -97,7 +98,7 @@ img {
   }
   &_subtitle {
     margin-top: 16px;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 500;
   }
   &_cta {
@@ -143,16 +144,16 @@ img {
     border-radius: 10px;
     height: 100%;
     &-icon {
-      font-size: 2.35rem;
+      font-size: 2rem;
       margin-bottom: 12px;
       color: $primary;
     }
     &-title {
-      font-size: 1.5rem;
+      font-size: 1.25rem;
       margin-bottom: 8px;
     }
     &-text {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       span {
         font-weight: 600;
       }
@@ -220,8 +221,8 @@ img {
     &-subtitle {
       font-size: 1.1rem;
       font-weight: 600;
-      opacity: 0.5;
-      margin-bottom: 8px;
+      opacity: 0.6;
+      margin: 8px 0;
     }
   }
   &_btns {
@@ -256,5 +257,23 @@ img {
     color: $text;
     text-size-adjust: none;
     background: $secondary;
+  }
+}
+
+.footer {
+  padding: 8px 0;
+  background: $primary;
+
+  &_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  &_text {
+    font-weight: 600;
+    font-size: 14px;
+    opacity: 0.7;
   }
 }
