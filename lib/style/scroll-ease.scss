@@ -1,0 +1,110 @@
+@import "./keyframe";
+
+/* Default properties */
+[data-scrollease] {
+  --data-scrollease-range: entry 20% cover 50%;
+  --data-scrollease-duration: 1s;
+  --data-scrollease-easing: ease-out;
+  --data-scrollease-delay: 0s;
+  animation-fill-mode: both;
+}
+
+/* Apply animations based on attribute values */
+[data-scrollease="fade"] {
+  animation-name: fade;
+}
+[data-scrollease="fade-up"] {
+  animation-name: fade-up;
+}
+[data-scrollease="fade-down"] {
+  animation-name: fade-down;
+}
+[data-scrollease="fade-left"] {
+  animation-name: fade-left;
+}
+[data-scrollease="fade-right"] {
+  animation-name: fade-right;
+}
+[data-scrollease="fade-up-right"] {
+  animation-name: fade-up-right;
+}
+[data-scrollease="fade-up-left"] {
+  animation-name: fade-up-left;
+}
+[data-scrollease="fade-down-right"] {
+  animation-name: fade-down-right;
+}
+[data-scrollease="fade-down-left"] {
+  animation-name: fade-down-left;
+}
+
+[data-scrollease="flip-up"] {
+  animation-name: flip-up;
+}
+[data-scrollease="flip-down"] {
+  animation-name: flip-down;
+}
+[data-scrollease="flip-left"] {
+  animation-name: flip-left;
+}
+[data-scrollease="flip-right"] {
+  animation-name: flip-right;
+}
+
+[data-scrollease="slide-up"] {
+  animation-name: slide-up;
+}
+[data-scrollease="slide-down"] {
+  animation-name: slide-down;
+}
+[data-scrollease="slide-left"] {
+  animation-name: slide-left;
+}
+[data-scrollease="slide-right"] {
+  animation-name: slide-right;
+}
+
+[data-scrollease="zoom-in"] {
+  animation-name: zoom-in;
+}
+[data-scrollease="zoom-in-up"] {
+  animation-name: zoom-in-up;
+}
+[data-scrollease="zoom-in-down"] {
+  animation-name: zoom-in-down;
+}
+[data-scrollease="zoom-in-left"] {
+  animation-name: zoom-in-left;
+}
+[data-scrollease="zoom-in-right"] {
+  animation-name: zoom-in-right;
+}
+[data-scrollease="zoom-out"] {
+  animation-name: zoom-out;
+}
+[data-scrollease="zoom-out-up"] {
+  animation-name: zoom-out-up;
+}
+[data-scrollease="zoom-out-down"] {
+  animation-name: zoom-out-down;
+}
+[data-scrollease="zoom-out-left"] {
+  animation-name: zoom-out-left;
+}
+[data-scrollease="zoom-out-right"] {
+  animation-name: zoom-out-right;
+}
+
+/* Apply duration and easing */
+[data-scrollease] {
+  animation-duration: var(--data-scrollease-duration);
+  animation-timing-function: var(--data-scrollease-easing);
+  animation-delay: var(--data-scrollease-delay);
+}
+
+@supports (animation-timeline: view()) {
+  [data-scrollease] {
+    animation-timeline: view();
+    animation-range: var(--data-scrollease-range);
+  }
+}

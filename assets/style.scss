@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+@import "breakpoints";
+
+// Fonts
+$font-body: "Quicksand", sans-serif;
+
+// Colors
+$text: #13110b;
+$background: #f9f8f4;
+$primary: #ad9e6b;
+$secondary: #cbcca3;
+$accent: #b4bd87;
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: $font-body;
+  font-weight: 400;
+  color: $text;
+  background-color: $background;
+  background-image: url("./image/ScrollEase-bg.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.body-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: $secondary;
+  opacity: 0.6;
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 100%;
+  max-width: 375px;
+  margin: 0 auto;
+  padding: 0 16px;
+
+  @include breakpoint(sm) {
+    max-width: 540px;
+  }
+
+  @include breakpoint(md) {
+    max-width: 720px;
+  }
+
+  @include breakpoint(lg) {
+    max-width: 960px;
+  }
+
+  @include breakpoint(xl) {
+    max-width: 1140px;
+  }
+
+  @include breakpoint(xxl) {
+    max-width: 1320px;
+  }
+}
+
+.hero {
+  height: 100dvh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+
+  &_title {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+  &_subtitle {
+    margin-top: 16px;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  &_cta {
+    position: absolute;
+    bottom: 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &-text {
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+    }
+    &-icon {
+      font-size: 1.75rem;
+    }
+  }
+}
+
+.feature {
+  padding: 30px 0;
+  &_title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  &_card_wrapper {
+    display: grid;
+    gap: 14px;
+    @include breakpoint(md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include breakpoint(xl) {
+      gap: 16px;
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  &_card {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 25px;
+    background-color: $background;
+    border-radius: 10px;
+    height: 100%;
+    &-icon {
+      font-size: 2.35rem;
+      margin-bottom: 12px;
+      color: $primary;
+    }
+    &-title {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+    }
+    &-text {
+      font-size: 1.2rem;
+      span {
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.example {
+  padding: 30px 0;
+  &_title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  .animation_title-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  .animation_title {
+    margin: 8px 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  &_container {
+  }
+
+  &_card {
+    height: 200px;
+    width: 100%;
+    border: 15px solid $primary;
+    background-color: $accent;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+
+    &:nth-child(odd) {
+      margin-right: auto;
+    }
+    &:nth-child(even) {
+      margin-left: auto;
+    }
+
+    @include breakpoint(lg) {
+      width: 45%;
+    }
+  }
+}
+
+.download {
+  padding: 30px 0;
+  background-color: $accent;
+  hr {
+    margin: 24px 0;
+  }
+  &_text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    &-subtitle {
+      font-size: 1.1rem;
+      font-weight: 600;
+      opacity: 0.5;
+      margin-bottom: 8px;
+    }
+  }
+  &_btns {
+    display: flex;
+    a {
+      padding: 10px 20px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      border: 2px solid $primary;
+      margin-right: 10px;
+      color: $text;
+      transition: all 0.3s ease;
+      i {
+        font-size: 1rem;
+        margin-right: 6px;
+      }
+      &:hover {
+        color: $background;
+        background-color: $primary;
+      }
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+  code {
+    font-size: 1rem;
+    padding: 24px;
+    display: block;
+    overflow-x: auto;
+    color: $text;
+    text-size-adjust: none;
+    background: $secondary;
+  }
+}

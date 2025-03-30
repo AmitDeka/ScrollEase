@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScrollEase - Animation Library</title>
+    <link rel="stylesheet" href="./assets/style.css">
+
+    <!-- ScrollEase CSS -->
+    <link rel="stylesheet" href="./lib/style/scroll-ease.css">
+
+    <script src="./lib/js/scrollease.js"></script>
+    <script>
+        ScrollEase.init();
+    </script>
+</head>
+
+<body>
+    <div class="body-overlay"></div>
+    <!-- <nav></nav> -->
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1 class="hero_title">ScrollEase</h1>
+                <p class="hero_subtitle">A lightweight, CSS-powered animation library for smooth scroll effects</p>
+            </div>
+            <div class="hero_cta">
+                <p class="hero_cta-text">
+                    Scroll down to see it in action
+                </p>
+                <i class="bi bi-arrow-down-circle-fill hero_cta-icon"></i>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2 class="feature_title">ScrollEase Features</h2>
+            <div class="container">
+                <div class="feature_card_wrapper">
+                    <!-- Card 1  -->
+                    <div class="feature_card">
+                        <div class="feature_card-icon">
+                            <i class="bi bi-lightning-charge-fill"></i>
+                        </div>
+                        <h3 class="feature_card-title">Lightweight & Fast</h3>
+                        <p class="feature_card-text">ScrollEase runs on pure CSS, ensuring fast performance with no
+                            JavaScript bloat.</p>
+                    </div>
+                    <!-- Card 2  -->
+                    <div class="feature_card">
+                        <div class="feature_card-icon">
+                            <i class="bi bi-palette"></i>
+                        </div>
+                        <h3 class="feature_card-title">Pure CSS Animations</h3>
+                        <p class="feature_card-text">Uses modern CSS features like <span>animation-timeline</span> for
+                            smooth, scroll-based effects.</p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="feature_card">
+                        <div class="feature_card-icon">
+                            <i class="bi bi-sliders"></i>
+                        </div>
+                        <h3 class="feature_card-title">Fully Customizable</h3>
+                        <p class="feature_card-text">Easily adjust speed, easing, and viewport triggers with simple data
+                            attributes.</p>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="feature_card">
+                        <div class="feature_card-icon">
+                            <i class="bi bi-arrow-repeat"></i>
+                        </div>
+                        <h3 class="feature_card-title">Fallback Support</h3>
+                        <p class="feature_card-text">Includes a JavaScript fallback for older browsers that lack CSS
+                            support.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="example">
+            <h2 class="example_title">Animation Examples</h2>
+            <div class="container">
+                <!-- Fade Animations  -->
+                <div class="animation_title-wrapper">
+                    <hr>
+                    <h3 class="animation_title">
+                        FADE
+                    </h3>
+                    <hr>
+                </div>
+                <div class="example_container">
+                    <div class="example_card" data-scrollease="fade">
+                        &lt;div data-scrollease="fade"&gt;&lt;/div&gt;
+                    </div>
+                    <div class="example_card" data-scrollease="fade-up">
+                        &lt;div data-scrollease="fade-up"&gt;&lt;/div&gt;
+                    </div>
+                    <div class="example_card" data-scrollease="fade-down">
+                        &lt;div data-scrollease="fade-down"&gt;&lt;/div&gt;
+                    </div>
+                    <div class="example_card" data-scrollease="fade-left">
+                        &lt;div data-scrollease="fade-left"&gt;&lt;/div&gt;
+                    </div>
+                    <div class="example_card" data-scrollease="fade-right">
+                        &lt;div data-scrollease="fade-right"&gt;&lt;/div&gt;
+                    </div>
+                    <div class="example_card" data-scrollease="fade-up-right">
+                        &lt;div data-scrollease="fade-up-right"&gt;&lt;/div&gt;
+                    </div>
+                    <div class="example_card" data-scrollease="fade-up-left">
+                        &lt;div data-scrollease="fade-up-left"&gt;&lt;/div&gt;
+                    </div>
+                    <div class="example_card" data-scrollease="fade-down-right">
+                        &lt;div data-scrollease="fade-down-right"&gt;&lt;/div&gt;
+                    </div>
+                    <div class="example_card" data-scrollease="fade-down-left">
+                        &lt;div data-scrollease="fade-down-left"&gt;&lt;/div&gt;
+                    </div>
+                </div>
+
+                <!-- Flip Animations  -->
+                <div class="animation_title-wrapper">
+                    <hr>
+                    <h3 class="animation_title">
+                        FLIP
+                    </h3>
+                    <hr>
+                </div>
+                <div class="example_container">
+                    <div class="example_card" data-scrollease="flip-up">
+                        &lt;div data-scrollease="flip-up"&gt;&lt;/div&gt;
+                    </div>
+                    <div class="example_card" data-scrollease="flip-down">
+                        &lt;div data-scrollease="flip-down"&gt;&lt;/div&gt;
+                    </div>
+                    <div class="example_card" data-scrollease="flip-left">
+                        &lt;div data-scrollease="flip-left"&gt;&lt;/div&gt;
+                    </div>
+                    <div class="example_card" data-scrollease="flip-right">
+                        &lt;div data-scrollease="flip-right"&gt;&lt;/div&gt;
+                    </div>
+                </div>
+
+                <!-- Slide Animations  -->
+                <div class="animation_title-wrapper">
+                    <hr>
+                    <h3 class="animation_title">
+                        SLIDE
+                    </h3>
+                    <hr>
+                </div>
+                <div class="example_container">
+                    <div class="example_card" data-scrollease="slide-up">
+                        &lt;div data-scrollease="slide-up"&gt;&lt;/div&gt;
+                    </div>
+                    <div class="example_card" data-scrollease="slide-down">
+                        &lt;div data-scrollease="slide-down"&gt;&lt;/div&gt;
+                    </div>
+                    <div class="example_card" data-scrollease="slide-left">
+                        &lt;div data-scrollease="slide-left"&gt;&lt;/div&gt;
+                    </div>
+                    <div class="example_card" data-scrollease="slide-right">
+                        &lt;div data-scrollease="slide-right"&gt;&lt;/div&gt;
+                    </div>
+                </div>
+
+                <!-- Zoom Animations  -->
+                <div class="animation_title-wrapper">
+                    <hr>
+                    <h3 class="animation_title">
+                        ZOOM
+                    </h3>
+                    <hr>
+                </div>
+                <div class="example_container">
+                    <div class="example_card" data-scrollease="zoom-in">
+                        &lt;div data-scrollease="zoom-in"&gt;&lt;/div&gt;
+                    </div>
+                    <div class="example_card" data-scrollease="zoom-in-up">
+                        &lt;div data-scrollease="zoom-in-up"&gt;&lt;/div&gt;
+                    </div>
+                    <div class="example_card" data-scrollease="zoom-in-down">
+                        &lt;div data-scrollease="zoom-in-down"&gt;&lt;/div&gt;
+                    </div>
+                    <div class="example_card" data-scrollease="zoom-in-left">
+                        &lt;div data-scrollease="zoom-in-left"&gt;&lt;/div&gt;
+                    </div>
+                    <div class="example_card" data-scrollease="zoom-in-right">
+                        &lt;div data-scrollease="zoom-in-right"&gt;&lt;/div&gt;
+                    </div>
+                    <div class="example_card" data-scrollease="zoom-out">
+                        &lt;div data-scrollease="zoom-out"&gt;&lt;/div&gt;
+                    </div>
+                    <div class="example_card" data-scrollease="zoom-out-up">
+                        &lt;div data-scrollease="zoom-out-up"&gt;&lt;/div&gt;
+                    </div>
+                    <div class="example_card" data-scrollease="zoom-out-down">
+                        &lt;div data-scrollease="zoom-out-down"&gt;&lt;/div&gt;
+                    </div>
+                    <div class="example_card" data-scrollease="zoom-out-left">
+                        &lt;div data-scrollease="zoom-out-left"&gt;&lt;/div&gt;
+                    </div>
+                    <div class="example_card" data-scrollease="zoom-out-right">
+                        &lt;div data-scrollease="zoom-out-right"&gt;&lt;/div&gt;
+                    </div>
+                </div>
+
+                <!-- Animations with different settings  -->
+                <div class="animation_title-wrapper">
+                    <hr>
+                    <h3 class="animation_title">
+                        ANIMATIONS WITH DIFFERENT SETTINGS
+                    </h3>
+                    <hr>
+                </div>
+                <div class="example_container">
+                    <div class="example_card" data-scrollease="slide-left" data-scrollease-duration="2s">
+                        &lt;div data-scrollease="slide-left" data-scrollease-duration="2s" &gt;&lt;/div&gt;
+                    </div>
+                    <div class="example_card" data-scrollease="flip-left" data-scrollease-duration="3s"
+                        data-scrollease-easing="linear">
+                        &lt;div data-scrollease="flip-left" data-scrollease-duration="3s"
+                        data-scrollease-easing="linear"&gt;&lt;/div&gt;
+                    </div>
+                    <div class="example_card" data-scrollease="zoom-in-left" data-scrollease-easing="ease-out"
+                        data-scrollease-delay="1.5s">
+                        &lt;div data-scrollease="zoom-in-left" data-scrollease-easing="ease-out"
+                        data-scrollease-delay="1.5s"
+                        &gt;&lt;/div&gt;
+                    </div>
+                    <div class="example_card" data-scrollease="fade-up-right" data-scrollease-easing="ease-out"
+                        data-scrollease-range="entry 30% cover 70%">
+                        &lt;div data-scrollease="fade-up-right" data-scrollease-easing="ease-out"
+                        data-scrollease-range="entry 0% cover 50%"&gt;&lt;/div&gt;
+                    </div>
+                    <div class="example_card" data-scrollease="zoom-in" data-scrollease-easing="ease-in-out"
+                        data-scrollease-delay="2s" data-scrollease-duation="3s"
+                        data-scrollease-range="entry 20% cover 90%">
+                        &lt;div data-scrollease="zoom-in" data-scrollease-easing="ease-in-out"
+                        data-scrollease-delay="2s" data-scrollease-duation="3s"
+                        data-scrollease-range="entry 20% cover 90%"&gt;&lt;/div&gt;
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="download">
+            <div class="container">
+                <h4 class="download_text">GET IT</h4>
+                <div class="download_btns">
+                    <a href=""><i class="bi bi-download"></i>Download</a>
+                    <a href=""><i class="bi bi-github"></i>View on Github</a>
+                </div>
+                <hr>
+                <h4 class="download_text">CDN SOURCES</h4>
+                <h5 class="download_text-subtitle">CSS</h5>
+
+                <pre><code>&lt;link href="" rel="stylesheet"&gt;</code></pre>
+                <h5 class="download_text-subtitle">JS</h5>
+                <pre><code>&lt;link href="" rel="stylesheet"&gt;</code></pre>
+                <hr>
+                <h4 class="download_text">INITIALIZE ScrollEase</h4>
+                <pre><code>&lt;script&gt;<br>   ScrollEase.init();<br>&lt;/script&gt;</code></pre>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
